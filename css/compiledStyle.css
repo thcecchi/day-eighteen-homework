@@ -8,7 +8,31 @@ body {
   margin-right: auto;
   width: 70%; }
   .wrapper .container {
-    display: block;
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
+    -webkit-flex-wrap: wrap;
     width: 100%;
     background: ghostwhite;
-    padding-top: 10%; }
+    margin-top: 10%; }
+    .wrapper .container .stockCard {
+      display: inline-block;
+      width: 100%;
+      border: 1px solid lightgray;
+      color: ghostwhite;
+      font-family: 'Helvetica', sans-serif; }
+      .wrapper .container .stockCard h2 {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        margin-left: 10%;
+        padding-top: 5%;
+        font-size: 3em; }
+      .wrapper .container .stockCard .stockPrice {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%; }
+      .wrapper .container .stockCard .stockChange {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        display: none; }

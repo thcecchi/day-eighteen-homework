@@ -10,10 +10,46 @@ body {
   width: 70%;
 
   .container {
-    display: block;
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
+    -webkit-flex-wrap: wrap;
     width: 100%;
     background: ghostwhite;
     margin-top: 10%;
+
+
+  .stockCard {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid lightgray;
+    color: ghostwhite;
+    font-family: 'Helvetica', sans-serif;
+
+    h2 {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      margin-left: 10%;
+      padding-top: 5%;
+      font-size: 3em;
+
+    }
+
+    .stockPrice {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+    }
+
+    .stockChange {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      display: none;
+    }
+
+  }
+
   }
 
 }
