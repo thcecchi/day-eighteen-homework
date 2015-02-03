@@ -5,11 +5,9 @@ templates.stockInfo = [
 "<div class='stockSymbol'>",
 "<h1><%= symbol %></h1>",
 "</div>",
-"<div class='stockPrice active'>",
-"<h1><%= price %></h1>",
-"</div>",
-"<div class='stockChange'>",
-"<h1><%= change %></h1>",
+"<div class='stockBox'>",
+"<h1 class='price'><%= price %></h1>",
+"<h1 class='change'><%= change %></h1>",
 "</div>",
 "</div>"
 ].join("")

@@ -17,17 +17,6 @@ var appPage =
       appPage.getFeed();
     });
 
-    $(this).click(function(){
-      $(this).closest('.stockPrice').removeClass('active');
-      $(this).closest('.stockChange').addClass('active');
-
-    });
-
-    $(this).click(function(){
-      $(this).closest('.stockChange').removeClass('active');
-      $(this).closest('.stockPrice').addClass('active');
-    });
-
   },
 
   getFeed: function () {
@@ -55,11 +44,11 @@ var appPage =
         $(".container").append(stockInfoCompiled(newDataList));
 
         if (newDataList.change.indexOf('+') == 0) {
-          $(".stockCard").css( "background", "green" );
+          $(".stockCard").css( "background", "forestgreen" );
         }
 
         else if (newDataList.change.indexOf('-') == 0) {
-          $(".stockCard").css( "background", "red" );
+          $(".stockCard").css( "background", "firebrick" );
         }
 
         else {
@@ -72,16 +61,11 @@ var appPage =
       }
     });
 
-    // $(this).click(function(){
-    //   $(this).removeClass('active');
-    //   $('.stockChange').addClass('active');
-    //
-    // });
-    //
-    // $(this).click(function(){
-    //   $(this).removeClass('active');
-    //   $('.stockPrice').addClass('active');
-    // });
+    $('.change').hide();
+    $('.stockSymbol').click(function(){
+      $('.price').toggle();
+      $('.change').toggle();
+    });
 
   }
 
