@@ -41,19 +41,20 @@ var appPage =
         // TEMPLATES
         var stockInfoCompiled = _.template(templates.stockInfo);
         console.log(stockInfoCompiled(newDataList));
-        $(".container").append(stockInfoCompiled(newDataList));
+        $(".container").prepend(stockInfoCompiled(newDataList));
 
         if (newDataList.change.indexOf('+') == 0) {
-          $(".stockCard").css( "background", "forestgreen" );
+          $('.container .stockCard').first().css( "background", "forestgreen" );
         }
 
         else if (newDataList.change.indexOf('-') == 0) {
-          $(".stockCard").css( "background", "firebrick" );
+          $('.container .stockCard').first().css( "background", "firebrick" );
         }
 
         else {
-          $(".stockCard").css( "background", "gray" );
+          $('.container .stockCard').first().css( "background", "gray" );
         }
+
 
       },
       error: function (error) {
