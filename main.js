@@ -11,6 +11,7 @@ var appPage =
 
   },
 
+
   initEvents: function () {
 
     $('.submitButton').click(function() {
@@ -55,18 +56,13 @@ var appPage =
           $('.container .stockCard').first().css( "background", "gray" );
         }
 
-
       },
       error: function (error) {
         console.log(error);
       }
     });
 
-    $('.change').hide();
-    $('.stockSymbol').click(function(){
-      $('.price').toggle();
-      $('.change').toggle();
-    });
+    ///code
 
   }
 
@@ -74,4 +70,12 @@ var appPage =
 
 $(document).ready(function() {
   appPage.init();
+
+  //listens to toggle between price and percent change
+  $('.container').on("click", ".stockCard", function(){
+    console.log("button pressed")
+    $(this).children('.stockBox').children('.price').toggle();
+    $(this).children('.stockBox').children('.change').toggle();
+  });
+
 });

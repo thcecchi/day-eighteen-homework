@@ -7,6 +7,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%; }
+  .wrapper .headline {
+    font-family: 'Helvetica', sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 3.5em;
+    margin-top: 5%;
+    margin-bottom: -5%; }
   .wrapper .inputs {
     margin-top: 10%;
     display: block;
