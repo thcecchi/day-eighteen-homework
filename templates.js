@@ -2,12 +2,14 @@ var templates = {};
 
 templates.stockInfo = [
 "<div class='stockCard'>",
-"<h2><%= symbol %></h2>",
-"<div class='stockPrice'>",
-"<h4><%= price %></h4>",
+"<div class='stockSymbol'>",
+"<h1><%= symbol %></h1>",
+"</div>",
+"<div class='stockPrice active'>",
+"<h1><%= price %></h1>",
 "</div>",
 "<div class='stockChange'>",
-"<h4><%= change %></h4>",
+"<h1><%= change %></h1>",
 "</div>",
 "</div>"
 ].join("")

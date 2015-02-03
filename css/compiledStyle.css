@@ -6,7 +6,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%; }
+  width: 50%; }
   .wrapper .container {
     display: -webkit-flex;
     -webkit-justify-content: space-around;
@@ -20,19 +20,35 @@ body {
       border: 1px solid lightgray;
       color: ghostwhite;
       font-family: 'Helvetica', sans-serif; }
-      .wrapper .container .stockCard h2 {
+      .wrapper .container .stockCard .stockSymbol {
         display: inline-block;
         vertical-align: top;
-        width: 50%;
-        margin-left: 10%;
-        padding-top: 5%;
-        font-size: 3em; }
+        width: 48%; }
+        .wrapper .container .stockCard .stockSymbol h1 {
+          display: block;
+          margin-left: 15%;
+          margin-right: auto;
+          font-size: 3em; }
       .wrapper .container .stockCard .stockPrice {
-        display: inline-block;
-        vertical-align: top;
-        width: 50%; }
-      .wrapper .container .stockCard .stockChange {
-        display: inline-block;
-        vertical-align: top;
-        width: 50%;
         display: none; }
+        .wrapper .container .stockCard .stockPrice.active {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%; }
+        .wrapper .container .stockCard .stockPrice h1 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 2em; }
+      .wrapper .container .stockCard .stockChange {
+        display: none; }
+        .wrapper .container .stockCard .stockChange.active {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+          padding-top: 3%; }
+        .wrapper .container .stockCard .stockChange h1 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 2em; }

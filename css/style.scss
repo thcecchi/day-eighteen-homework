@@ -7,7 +7,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 50%;
 
   .container {
     display: -webkit-flex;
@@ -25,27 +25,54 @@ body {
     color: ghostwhite;
     font-family: 'Helvetica', sans-serif;
 
-    h2 {
+    .stockSymbol {
       display: inline-block;
       vertical-align: top;
-      width: 50%;
-      margin-left: 10%;
-      padding-top: 5%;
-      font-size: 3em;
+      width: 48%;
 
+      h1 {
+        display: block;
+        margin-left: 15%;
+        margin-right: auto;
+        font-size: 3em;
+
+      }
     }
 
     .stockPrice {
-      display: inline-block;
-      vertical-align: top;
-      width: 50%;
+      display: none;
+
+      &.active {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+
+      h1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2em;
+      }
     }
 
     .stockChange {
-      display: inline-block;
-      vertical-align: top;
-      width: 50%;
       display: none;
+
+      &.active {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        padding-top: 3%;
+      }
+
+      h1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2em;
+      }
+
     }
 
   }
