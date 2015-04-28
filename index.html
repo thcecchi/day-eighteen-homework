@@ -1,26 +1,31 @@
 <html>
   <head>
     <title>Stocktwits Trending Feed</title>
-    <link rel="stylesheet" href="/css/compiledStyle.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
 
   <body>
-    <section class="wrapper">
-      <h1 class="headline">Stocks, Bro</h1>
+    <section class="wrapper container-fluid">
+      <h1 class="headline">Stocks</h1>
       <div class="inputs">
         <input class="tickerInput" type="text" name="lookup" value="">
-        <button class="submitButton" name="submit">Submit</button>
+        <button class="submitButton" type="submit" value="submit" name="submit">Submit</button>
       </div>
 
-      <div class="container">
+      <div class='row'>
+      <div class="container col-md-12">
 
       </div>
+    </div>
     </section>
 
 
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="templates.js"></script>
     <script src="main.js"></script>
   </body>
