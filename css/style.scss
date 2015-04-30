@@ -5,9 +5,16 @@
 }
 
 body {
+  font-family: 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 100%;
+}
+
+.activeBreadcrumb {
+  color: dodgerblue;
+  // opacity: 1;
+
 }
 
 .row {
@@ -26,7 +33,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 4em;
+    font-weight: bold;
     margin-top: 5%;
     margin-bottom: -5%;
   }
@@ -38,45 +46,57 @@ body {
     margin-right: auto;
 
     input {
-      border: 2px solid dodgerblue;
-      width: 100%;
+      border: none;
+      border-bottom: 5px solid dodgerblue;
+      display: block;
+      width: 25%;
       height: 75px;
       font-size: 3em;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     button {
       display: block;
       background: dodgerblue;
-      margin-top: 2%;
+      margin-top: 3%;
       border: none;
-      width: 250px;
+      width: 25%;
       height: 50px;
       font-size: 2em;
       color: ghostwhite;
       margin-left: auto;
       margin-right: auto;
       font-weight: bold;
+      letter-spacing: 1pt;
     }
   }
 
   .container {
-    display: -webkit-flex;
-    -webkit-justify-content: space-around;
-    -webkit-flex-wrap: wrap;
     width: 100%;
     background: ghostwhite;
     margin-top: 10%;
 
-
   .stockCard {
     display: inline-block;
     // width: 100%;
-    border: 1px solid lightgray;
-    color: ghostwhite;
+    // border: 5px solid black;
+    background: white;
     font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1%;
 
     .next, .prev {
       display: inline-block;
+      margin-top: 2%;
+      font-size: 2em;
     }
 
     .prev {
@@ -94,18 +114,18 @@ body {
       // @include centered();
       border-left: 5px solid #000;
       border-right: 5px solid #000;
+      border-top: 5px solid #000;
       border-bottom: 5px solid #000;
-      border-top: none;
       border-radius: 0px;
-
-      .activeBreadcrumb {
-        color: green;
-      }
+      margin-top: 1%;
 
       li {
         display: inline-block;
         // margin-left: 2%;
         // margin-right: 2%;
+        // opacity: .5;
+        -webkit-transition: .1s;
+        transition: .1s;
 
         &::before {
           content: none;
@@ -128,15 +148,18 @@ body {
 
       h1 {
         display: block;
-        margin-left: 15%;
-        margin-right: auto;
+        // margin-left: 15%;
+        // margin-right: auto;
         font-size: 3em;
+        font-weight: bold;
+        color: #000;
+        text-align: right;
       }
     }
 
     .fa {
       font-size: 2.5em;
-      color: #fff;
+      color: #000;
       padding-top: 5%;
     }
 
@@ -156,25 +179,12 @@ body {
         }
 
 
-        .price {
+        .price, .change, .pe {
           display: inline-block;
-          margin-left: auto;
-          margin-right: auto;
+          // margin-left: auto;
+          // margin-right: auto;
           font-size: 3em;
-        }
-
-        .change {
-          display: inline-block;
-          margin-left: auto;
-          margin-right: auto;
-          font-size: 3em;
-        }
-
-        .pe {
-          display: inline-block;
-          margin-left: auto;
-          margin-right: auto;
-          font-size: 3em;
+          color: #000;
         }
 
       }

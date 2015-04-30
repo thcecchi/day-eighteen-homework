@@ -1,7 +1,11 @@
 body {
+  font-family: 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 100%; }
+
+.activeBreadcrumb {
+  color: dodgerblue; }
 
 .row {
   width: 100%; }
@@ -14,7 +18,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 4em;
+    font-weight: bold;
     margin-top: 5%;
     margin-bottom: -5%; }
   .wrapper .inputs {
@@ -23,36 +28,46 @@ body {
     margin-left: auto;
     margin-right: auto; }
     .wrapper .inputs input {
-      border: 2px solid dodgerblue;
-      width: 100%;
+      border: none;
+      border-bottom: 5px solid dodgerblue;
+      display: block;
+      width: 25%;
       height: 75px;
-      font-size: 3em; }
+      font-size: 3em;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold; }
+      .wrapper .inputs input:focus {
+        outline: none; }
     .wrapper .inputs button {
       display: block;
       background: dodgerblue;
-      margin-top: 2%;
+      margin-top: 3%;
       border: none;
-      width: 250px;
+      width: 25%;
       height: 50px;
       font-size: 2em;
       color: ghostwhite;
       margin-left: auto;
       margin-right: auto;
-      font-weight: bold; }
+      font-weight: bold;
+      letter-spacing: 1pt; }
   .wrapper .container {
-    display: -webkit-flex;
-    -webkit-justify-content: space-around;
-    -webkit-flex-wrap: wrap;
     width: 100%;
     background: ghostwhite;
     margin-top: 10%; }
     .wrapper .container .stockCard {
       display: inline-block;
-      border: 1px solid lightgray;
-      color: ghostwhite;
-      font-family: 'Helvetica', sans-serif; }
+      background: white;
+      font-family: 'Helvetica', sans-serif;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 1%; }
       .wrapper .container .stockCard .next, .wrapper .container .stockCard .prev {
-        display: inline-block; }
+        display: inline-block;
+        margin-top: 2%;
+        font-size: 2em; }
       .wrapper .container .stockCard .prev {
         text-align: right; }
       .wrapper .container .stockCard .next {
@@ -63,13 +78,14 @@ body {
         color: #000;
         border-left: 5px solid #000;
         border-right: 5px solid #000;
+        border-top: 5px solid #000;
         border-bottom: 5px solid #000;
-        border-top: none;
-        border-radius: 0px; }
-        .wrapper .container .stockCard .breadcrumb .activeBreadcrumb {
-          color: green; }
+        border-radius: 0px;
+        margin-top: 1%; }
         .wrapper .container .stockCard .breadcrumb li {
-          display: inline-block; }
+          display: inline-block;
+          -webkit-transition: .1s;
+          transition: .1s; }
           .wrapper .container .stockCard .breadcrumb li::before {
             content: none; }
           .wrapper .container .stockCard .breadcrumb li h6 {
@@ -81,12 +97,13 @@ body {
         cursor: pointer; }
         .wrapper .container .stockCard .stockSymbol h1 {
           display: block;
-          margin-left: 15%;
-          margin-right: auto;
-          font-size: 3em; }
+          font-size: 3em;
+          font-weight: bold;
+          color: #000;
+          text-align: right; }
       .wrapper .container .stockCard .fa {
         font-size: 2.5em;
-        color: #fff;
+        color: #000;
         padding-top: 5%; }
       .wrapper .container .stockCard .stockBox {
         cursor: pointer;
@@ -97,20 +114,9 @@ body {
           display: none; }
         .wrapper .container .stockCard .stockBox .active {
           display: inline-block; }
-        .wrapper .container .stockCard .stockBox .price {
+        .wrapper .container .stockCard .stockBox .price, .wrapper .container .stockCard .stockBox .change, .wrapper .container .stockCard .stockBox .pe {
           display: inline-block;
-          margin-left: auto;
-          margin-right: auto;
-          font-size: 3em; }
-        .wrapper .container .stockCard .stockBox .change {
-          display: inline-block;
-          margin-left: auto;
-          margin-right: auto;
-          font-size: 3em; }
-        .wrapper .container .stockCard .stockBox .pe {
-          display: inline-block;
-          margin-left: auto;
-          margin-right: auto;
-          font-size: 3em; }
+          font-size: 3em;
+          color: #000; }
 
 /*# sourceMappingURL=style.css.map */

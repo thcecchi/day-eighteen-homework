@@ -47,11 +47,11 @@ var appPage =
         $(".container").prepend(stockInfoCompiled(newDataList));
 
         if (newDataList.change.indexOf('+') == 0) {
-          $('.container .stockCard').first().css( "background", "forestgreen" );
+          $('.container .stockCard').first().css( "border", "5px solid forestgreen" );
         }
 
         else if (newDataList.change.indexOf('-') == 0) {
-          $('.container .stockCard').first().css( "background", "firebrick" );
+          $('.container .stockCard').first().css( "border", "5px solid firebrick" );
         }
 
         else {
@@ -85,14 +85,22 @@ $(document).ready(function() {
     console.log('next')
     e.preventDefault();
 
-    var $toHighlight = $('.active').next().length > 0 ? $(this).siblings().children('.active').next() : $(this).siblings().children('.stockCard li').first();
+    var $toHighlight = $('.active').next().length > 0 ? $(this).parent().siblings().children('.stockBox').children('.active').next() : $(this).parent().siblings().children().children('.stockBox li').first();
 
-    var breadcrumb = $('.activeBreadcrumb').next().length > 0 ? $(this).siblings().children('.activeBreadcrumb').next() : $(this).siblings().children('.stockCard li').first();
+    var $breadcrumb = $('.activeBreadcrumb').next().length > 0 ? $(this).siblings().children('.activeBreadcrumb').next() : $(this).siblings().children('.breadcrumb li').first();
 
     console.log($toHighlight.text())
+    console.log($breadcrumb.text())
 
     $('.active').removeClass('active');
+    $('.activeBreadcrumb').removeClass('activeBreadcrumb')
+
     $toHighlight.addClass('active');
+    $breadcrumb.addClass('activeBreadcrumb')
+
+    if ($toHighlight.text() == '') {
+      $toHighlight.children('h1').text('Unavailable')
+    }
   });
 
 
@@ -100,12 +108,16 @@ $(document).ready(function() {
     console.log('prev')
     e.preventDefault();
 
-    var $toHighlight = $('.active').prev().length > 0 ? $(this).siblings().children('.active').prev() : $(this).siblings().children('.stockCard li').last();
+    var $toHighlight = $('.active').prev().length > 0 ? $(this).parent().siblings().children('.stockBox').children('.active').prev() : $(this).parent().siblings().children().children('.stockBox li').last();
 
-    var breadcrumb = $('.activeBreadCrumb').prev().length > 0 ? $(this).siblings().children('.activeBreadcrumb').prev() : $(this).siblings().children('.stockCard li').last();
+    var $breadcrumb = $('.active').prev().length > 0 ? $(this).siblings().children('.active').prev() : $(this).siblings().children('.stockCard li').last()
 
     $('.active').removeClass('active');
+    $('.activeBreadcrumb').removeClass('activeBreadcrumb')
+
     $toHighlight.addClass('active');
+    $breadcrumb.addClass('activeBreadcrumb')
+
   });
 
 });
